@@ -1,22 +1,31 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Programación Visual con Spring Boot</title>
+   <link rel= "stylesheet" th:href="@{/css/estilos.css}">
 </head>
 <body>
-    <header>
-        <h1>Programación Visual con Spring Boot</h1>
-        <nav>
+    <header class="navbar">
+        <div class="navbar-logo">
+            <img alt="Logo" th:src="@{/images/spring-logo.png}">
+        </div>
+        <div class="navbar-title">
+            <h1>Programacion Visual con Spring Tools</h1>
+        </div>
+        <nav class="navbar-links">
             <ul>
-                <li><a href="#introduccion">Introduccion</a></li>
-                <li><a href="#desarrollo">Desarrollo</a></li>
-                <li><a href="#recursos">Recursos</a></li>
+                <li><a th:href="@{/inicio}">Inicio</a></li>
+                <li><a th:href="@{/formulario}">Formulario</a></li>
             </ul>
         </nav>
     </header>
+    
+     <img class="centrar-fondo" th:src="@{/images/fondocolorido.png}">
 
     <main>
+    
+    	
         <section id="introduccion">
             <h2>Introducción</h2>
             <p>La programación visual con Spring Boot es una forma eficiente de desarrollar aplicaciones web utilizando el framework Spring Boot en conjunto con herramientas de diseño visual como Thymeleaf y Bootstrap.</p>
@@ -37,9 +46,18 @@
             <h2>Recursos</h2>
             <p>Para aprender más sobre programación visual con Spring Boot, te recomendamos explorar los siguientes recursos:</p>
             <ul>
-                <li><a href="https://spring.io/guides/gs/serving-web-content/">Guía de Spring Boot para servir contenido web</a></li>
-                <li><a href="https://www.thymeleaf.org/">Documentación oficial de Thymeleaf</a></li>
-                <li><a href="https://getbootstrap.com/">Sitio web oficial de Bootstrap</a></li>
+                <li>
+                	<img class="svg-icon" th:src="@{/images/microservices.svg}"  width="50" height="50">
+                	<a href="https://spring.io/guides/gs/serving-web-content/">Guía de Spring Boot</a>
+                </li>
+                <li>
+                	 <img class="svg-icon" th:src="@{/images/documento.svg}"  width="50" height="50">
+               		 <a href="https://www.thymeleaf.org/">Documentación oficial</a>
+                </li>
+                <li>
+                	<img class="svg-icon" th:src="@{/images/web-apps.svg}"  width="50" height="50">
+                	<a href="https://getbootstrap.com/">Sitio web oficial</a>
+                </li>
             </ul>
             <p>Estos recursos te ayudarán a profundizar en los conceptos y técnicas necesarias para desarrollar aplicaciones web visualmente atractivas con Spring Boot.</p>
         </section>
@@ -49,7 +67,7 @@
         <h2>Contenido Adicional</h2>
         <p>En el contenido adicional relacionado, puedes encontrar enlaces a ejemplos de proyectos de Spring Boot, tutoriales de diseño web y herramientas de desarrollo recomendadas.</p>
         <a href="https://github.com/spring-projects/spring-boot">Proyectos de Spring Boot en GitHub</a>
-        <img src="../static/images/spring.png" alt="Logo de Spring Boot">
+        <img th:src="@{/images/spring-logo.png}" alt="Logo de Spring Boot">
     </aside>
 
     <footer>
